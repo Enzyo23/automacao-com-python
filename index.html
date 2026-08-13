@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Sistema Python PowerUp - Login</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef1f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    width: 340px;
+  }
+  h1 {
+    font-size: 20px;
+    margin: 0 0 4px 0;
+    color: #1d3557;
+  }
+  p.subtitle {
+    margin: 0 0 24px 0;
+    color: #555;
+    font-size: 14px;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 4px;
+    color: #333;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #2b6cb0;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  button:hover { background: #245a94; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>Sistema Python PowerUp</h1>
+    <p class="subtitle">Faça seu Login para acessar</p>
+    <form onsubmit="event.preventDefault(); window.location.href='cadastro.html';">
+      <label for="email">E-mail</label>
+      <input type="text" id="email" placeholder="Seu e-mail de login">
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" placeholder="Sua senha">
+      <button type="submit">Logar</button>
+    </form>
+  </div>
+</body>
+</html>

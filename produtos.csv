@@ -1,0 +1,66 @@
+codigo,marca,tipo,categoria,preco_unitario,custo,obs
+FOMU000251,Multilaser,Fone,1,168.68,89.54,Conferir estoque
+MOLO000253,Logitech,Mouse,3,226.09,109.96,Conferir estoque
+FOPL000252,Philips,Fone,2,115.97,52.51,Produto em promocao
+TETC000254,TCL,Televisao,4,4755.97,1766.43,
+CAAD000253,Adidas,Camisa,3,57.47,29.43,Conferir estoque
+TESE000252,SEMP,Televisao,2,1772.85,903.69,Conferir estoque
+CAAD000252,Adidas,Camisa,2,34.21,17.71,Troca de fornecedor
+TESE000251,SEMP,Televisao,1,2735.34,1030.14,Troca de fornecedor
+TEAO000254,AOC,Televisao,4,3529.3,1336.33,Conferir estoque
+TEAO000251,AOC,Televisao,1,2341.94,856.87,
+BOHA000254,Hashtag,Bone,4,53.71,29.22,
+BONE000251,New Era,Bone,1,52.2,23.51,
+TCLO000252,Logitech,Teclado,2,51.59,24.19,Conferir estoque
+CANI000254,Nike,Camisa,4,29.31,11.0,
+TEPH000252,Philco,Televisao,2,4786.1,2778.85,
+BOHA000251,Hashtag,Bone,1,26.85,14.29,
+BOHA000253,Hashtag,Bone,3,47.53,19.25,
+TEPH000251,Philco,Televisao,1,1103.06,596.34,Conferir estoque
+TETC000252,TCL,Televisao,2,4442.12,2478.33,
+TETO000251,Toshiba,Televisao,1,3935.55,1712.14,
+TCLO000251,Logitech,Teclado,1,293.73,141.92,
+TESA000254,Samsung,Televisao,4,904.39,458.4,Produto em promocao
+MOHP000252,HP,Mouse,2,110.93,41.4,
+CANI000252,Nike,Camisa,2,48.18,17.41,
+FOJB000254,JBL,Fone,4,161.53,67.78,
+TCMU000251,Multilaser,Teclado,1,90.54,51.44,
+TETO000253,Toshiba,Televisao,3,4428.92,1841.75,Conferir estoque
+TCRA000253,Razer,Teclado,3,271.39,125.62,
+TETO000252,Toshiba,Televisao,2,2399.92,1112.2,Troca de fornecedor
+MOLO000252,Logitech,Mouse,2,78.62,41.99,Troca de fornecedor
+TETC000251,TCL,Televisao,1,1891.12,671.1,
+FOPL000251,Philips,Fone,1,69.27,25.92,
+CANI000251,Nike,Camisa,1,55.42,24.41,
+TESA000252,Samsung,Televisao,2,1408.88,844.46,Conferir estoque
+TESA000253,Samsung,Televisao,3,2670.17,1439.08,Produto em promocao
+TELG000251,LG,Televisao,1,1378.08,654.32,Troca de fornecedor
+MOHP000253,HP,Mouse,3,117.31,51.15,
+FOMU000252,Multilaser,Fone,2,179.22,73.61,
+MOMU000252,Multilaser,Mouse,2,219.07,115.08,
+MOLO000251,Logitech,Mouse,1,46.73,25.02,
+TCRA000252,Razer,Teclado,2,298.62,153.03,
+MOLO000254,Logitech,Mouse,4,135.25,48.35,
+FOJB000252,JBL,Fone,2,216.73,79.05,
+TEAO000253,AOC,Televisao,3,4866.96,2750.78,
+TCRA000251,Razer,Teclado,1,211.61,111.78,
+MOMU000251,Multilaser,Mouse,1,159.03,56.72,
+FOJB000251,JBL,Fone,1,80.58,32.64,
+TESA000251,Samsung,Televisao,1,2370.8,1175.64,
+CAAD000251,Adidas,Camisa,1,45.43,20.04,
+CAHA000251,Hashtag,Camisa,1,49.19,23.81,
+TELG000252,LG,Televisao,2,2510.72,1045.01,
+MOHP000251,HP,Mouse,1,111.97,43.54,Produto em promocao
+TELG000253,LG,Televisao,3,3826.95,1855.09,Troca de fornecedor
+TEAO000252,AOC,Televisao,2,3141.09,1466.93,
+FOJB000253,JBL,Fone,3,273.04,154.24,
+FOPL000253,Philips,Fone,3,222.79,115.48,Troca de fornecedor
+CANI000253,Nike,Camisa,3,50.92,30.36,Produto em promocao
+MORA000251,Razer,Mouse,1,143.02,60.0,Produto em promocao
+TCRA000254,Razer,Teclado,4,79.04,34.34,Conferir estoque
+TCMU000252,Multilaser,Teclado,2,289.84,168.75,Produto em promocao
+BOHA000252,Hashtag,Bone,2,38.49,16.07,Troca de fornecedor
+TETC000253,TCL,Televisao,3,1501.48,615.93,Conferir estoque
+BONE000252,New Era,Bone,2,28.44,16.66,Troca de fornecedor
+MORA000252,Razer,Mouse,2,16.85,9.29,Troca de fornecedor
+CAHA000252,Hashtag,Camisa,2,23.15,9.8,Troca de fornecedor

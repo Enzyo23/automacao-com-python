@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Sistema Python PowerUp - Cadastro de Produtos</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef1f5;
+    margin: 0;
+    padding: 30px;
+  }
+  .container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  .form-card { width: 340px; }
+  h2 {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    color: #1d3557;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 4px;
+    color: #333;
+  }
+  input {
+    width: 100%;
+    padding: 9px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .buttons { display: flex; gap: 10px; }
+  button {
+    flex: 1;
+    padding: 11px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  #btnEnviar { background: #2b6cb0; color: #fff; }
+  #btnEnviar:hover { background: #245a94; }
+  #btnLimpar { background: #e07b39; color: #fff; }
+  #btnLimpar:hover { background: #c86a2f; }
+
+  .table-card {
+    flex: 1;
+    min-width: 500px;
+    max-height: 640px;
+    overflow-y: auto;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+  }
+  th, td {
+    border-bottom: 1px solid #e2e2e2;
+    padding: 8px 10px;
+    text-align: left;
+  }
+  th { background: #f7f7f7; color: #333; }
+  #contador {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="card form-card">
+    <h2>Formulário de Cadastro de Produtos</h2>
+    <form id="formCadastro" onsubmit="return cadastrarProduto(event)">
+      <label for="codigo">Código do Produto</label>
+      <input type="text" id="codigo" placeholder="Código do produto">
+
+      <label for="marca">Marca do Produto</label>
+      <input type="text" id="marca" placeholder="Marca do Produto">
+
+      <label for="tipo">Tipo do Produto</label>
+      <input type="text" id="tipo" placeholder="Tipo do Produto">
+
+      <label for="categoria">Categoria do Produto</label>
+      <input type="text" id="categoria" placeholder="Categoria do Produto">
+
+      <label for="preco">Preço Unitário do Produto</label>
+      <input type="text" id="preco" placeholder="Preço Unitário do Produto">
+
+      <label for="custo">Custo do Produto</label>
+      <input type="text" id="custo" placeholder="Custo do Produto">
+
+      <label for="obs">OBS</label>
+      <input type="text" id="obs" placeholder="Observações">
+
+      <div class="buttons">
+        <button type="submit" id="btnEnviar">Enviar</button>
+        <button type="button" id="btnLimpar" onclick="limparCampos()">Limpar</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card table-card">
+    <h2>Produtos Cadastrados</h2>
+    <div id="contador">0 produtos cadastrados</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th><th>Marca</th><th>Tipo</th><th>Categoria</th>
+          <th>Preço Un.</th><th>Custo</th><th>OBS</th>
+        </tr>
+      </thead>
+      <tbody id="corpoTabela"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script>
+  function carregarProdutos() {
+    const dados = JSON.parse(localStorage.getItem("produtos") || "[]");
+    const corpo = document.getElementById("corpoTabela");
+    corpo.innerHTML = "";
+    dados.forEach(p => {
+      const linha = document.createElement("tr");
+      linha.innerHTML = `<td>${p.codigo}</td><td>${p.marca}</td><td>${p.tipo}</td>
+        <td>${p.categoria}</td><td>${p.preco}</td><td>${p.custo}</td><td>${p.obs}</td>`;
+      corpo.appendChild(linha);
+    });
+    document.getElementById("contador").innerText = `${dados.length} produtos cadastrados`;
+  }
+
+  function cadastrarProduto(event) {
+    event.preventDefault();
+    const produto = {
+      codigo: document.getElementById("codigo").value,
+      marca: document.getElementById("marca").value,
+      tipo: document.getElementById("tipo").value,
+      categoria: document.getElementById("categoria").value,
+      preco: document.getElementById("preco").value,
+      custo: document.getElementById("custo").value,
+      obs: document.getElementById("obs").value,
+    };
+    if (!produto.codigo) return false;
+    const dados = JSON.parse(localStorage.getItem("produtos") || "[]");
+    dados.push(produto);
+    localStorage.setItem("produtos", JSON.stringify(dados));
+    limparCampos();
+    carregarProdutos();
+    return false;
+  }
+
+  function limparCampos() {
+    document.getElementById("formCadastro").reset();
+    document.getElementById("codigo").focus();
+  }
+
+  carregarProdutos();
+</script>
+
+</body>
+</html>
